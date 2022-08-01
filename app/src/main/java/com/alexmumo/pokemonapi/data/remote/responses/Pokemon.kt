@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class Pokemon(
     @SerializedName("count")
-    val count: Int?,
+    val count: Int,
     @SerializedName("next")
-    val next: String?,
+    val next: String,
     @SerializedName("previous")
-    val previous: Any?,
+    val previous: Any,
     @SerializedName("results")
-    val results: List<Result?>?
+    val results: List<Result>
 )

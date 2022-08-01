@@ -1,20 +1,18 @@
 package com.alexmumo.pokemonapi.data.repository
 
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import com.alexmumo.pokemonapi.data.paging.PokemonDataSource
 import com.alexmumo.pokemonapi.data.remote.api.PokemonApi
 import com.alexmumo.pokemonapi.data.remote.responses.Pokemon
-import com.alexmumo.pokemonapi.util.Resource
-import retrofit2.HttpException
-import java.io.IOException
+import kotlinx.coroutines.flow.Flow
 
 class PokemonRepositoryImpl(private val pokemonApi: PokemonApi) : PokemonRepository {
-    override suspend fun getPokemonList(limit: Int, offset: Int): Resource<Pokemon> {
-        val response = try {
-            pokemonApi.fetchPokemon(offset, limit)
-        } catch (e: IOException) {
-            return Resource.Error("IOException")
-        } catch (e: HttpException) {
-            return Resource.Error("IOException")
+    override fun searchPokemon(searchString: String): Flow<PagingData<Pokemon>> = Pager(
+        config = PagingConfig(pageSize = 10, enablePlaceholders = false),
+        pagingSourceFactory = {
+            PokemonDataSource(pokemonApi, searchString)
         }
-        return Resource.Success(response)
-    }
+    ).flow
 }

@@ -1,8 +1,10 @@
 package com.alexmumo.pokemonapi.data.repository
 
+import androidx.paging.PagingData
 import com.alexmumo.pokemonapi.data.remote.responses.Pokemon
-import com.alexmumo.pokemonapi.util.Resource
+import kotlinx.coroutines.flow.Flow
 
 interface PokemonRepository {
-    suspend fun getPokemonList(limit: Int, offset: Int): Resource<Pokemon>
+    fun searchPokemon(searchString: String): Flow<PagingData<Pokemon>>
+    // suspend fun getPokemonList(limit: Int, offset: Int): Resource<Pokemon>
 }
