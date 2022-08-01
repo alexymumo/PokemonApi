@@ -1,6 +1,7 @@
 package com.alexmumo.pokemonapi
 
 import android.app.Application
+import com.alexmumo.pokemonapi.data.repository.repositoryModule
 import com.alexmumo.pokemonapi.ui.di.pokemonViewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -13,7 +14,7 @@ class PokemonApp : Application() {
         startKoin {
             androidContext(this@PokemonApp)
             androidLogger(level = Level.DEBUG)
-            modules(pokemonViewModelModule,)
+            modules(pokemonViewModelModule, repositoryModule,)
         }
     }
 }
