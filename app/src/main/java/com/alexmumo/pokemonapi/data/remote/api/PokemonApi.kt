@@ -12,17 +12,3 @@ interface PokemonApi {
     ): Pokemon
 }
 
-/*val url = "https://api.letbuildthatapp.com/youtube/home_feed"
-val request = Request.Builder().url(url).build()
-val client = OkHttpClient()
-client.newCall(request).enqueue(object : Callback {
-    override fun onFailure(call: Call, e: IOException) {
-        println("failed to execute")
-    }
-    override fun onResponse(call: Call, response: Response) {
-        val body = response.body.toString()
-        print(body)
-    }
-})
-
- */
