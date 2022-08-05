@@ -1,4 +1,4 @@
-package com.alexmumo.pokemonapi.data.cache.di
+package com.alexmumo.pokemonapi.di
 
 import androidx.room.Room
 import com.alexmumo.pokemonapi.data.cache.db.PokemonDatabase

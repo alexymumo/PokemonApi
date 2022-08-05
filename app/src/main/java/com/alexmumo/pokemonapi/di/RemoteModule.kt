@@ -1,4 +1,4 @@
-package com.alexmumo.pokemonapi.data.remote.di
+package com.alexmumo.pokemonapi.di
 
 import com.alexmumo.pokemonapi.data.remote.api.PokemonApi
 import okhttp3.OkHttpClient
