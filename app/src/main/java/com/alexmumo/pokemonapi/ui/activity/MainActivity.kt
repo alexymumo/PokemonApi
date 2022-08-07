@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.alexmumo.pokemonapi.ui.screens.HomeScreen
+import com.alexmumo.pokemonapi.ui.screens.MainScreen
 import com.alexmumo.pokemonapi.ui.theme.PokemonApiTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    HomeScreen()
+                    MainScreen()
                 }
             }
         }

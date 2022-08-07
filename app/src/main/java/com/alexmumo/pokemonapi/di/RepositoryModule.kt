@@ -1,10 +1,10 @@
 package com.alexmumo.pokemonapi.di
 
-import com.alexmumo.pokemonapi.data.repository.PokemonRepo
+import com.alexmumo.pokemonapi.data.repository.UserRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {
     single {
-        PokemonRepo(get())
+        UserRepository(userApi = get())
     }
 }
