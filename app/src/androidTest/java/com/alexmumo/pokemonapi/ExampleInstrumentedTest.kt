@@ -8,6 +8,8 @@ import org.junit.runner.RunWith
 
 import org.junit.Assert.*
 
+// ktlint-disable no-wildcard-imports
+
 /**
  * Instrumented test, which will execute on an Android device.
  *

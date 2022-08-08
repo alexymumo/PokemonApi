@@ -1,6 +1,7 @@
-package com.alexmumo.pokemonapi.data.remote.di
+package com.alexmumo.pokemonapi.di
 
-import com.alexmumo.pokemonapi.data.remote.api.PokemonApi
+import com.alexmumo.pokemonapi.data.remote.api.UserApi
+import com.alexmumo.pokemonapi.util.Constants.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -11,11 +12,11 @@ import java.util.concurrent.TimeUnit
 val remoteModule = module {
     single {
         Retrofit.Builder()
-            .baseUrl("https://pokeapi.co/api/v2/")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(provideOkhttpClient())
             .build()
-            .create(PokemonApi::class.java)
+            .create(UserApi::class.java)
     }
 }
 
@@ -29,5 +30,5 @@ fun provideOkhttpClient(): OkHttpClient {
 }
 
 fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
-    return HttpLoggingInterceptor().setLevel(level = HttpLoggingInterceptor.Level.BASIC)
+    return HttpLoggingInterceptor().setLevel(level = HttpLoggingInterceptor.Level.BODY)
 }

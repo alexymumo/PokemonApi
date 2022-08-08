@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1002628351636",
+    "project_id": "pokemonapi-58b71",
+    "storage_bucket": "pokemonapi-58b71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002628351636:android:bb16632462f5634be61681",
+        "android_client_info": {
+          "package_name": "com.alexmumo.pokemonapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002628351636-dib4363ut4s9v7hs9f92orogup6347su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU0geW2cq4k0IpLy_4QnXgNnTh6oNCOU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002628351636-dib4363ut4s9v7hs9f92orogup6347su.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
